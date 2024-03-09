@@ -1,0 +1,62 @@
+.bar-left {
+    grid-area: bar-left;
+    background-color: hsl(6, 69%, 53%);
+}
+
+.bar-right-a {
+    grid-area: bar-right-a;
+    background-color: hsl(6, 69%, 53%);
+}
+
+.content-b {
+    grid-area: content-b;
+}
+.content-a {
+    grid-area: content-a;
+}
+.content-c {
+    grid-area: content-c;
+}
+
+.content-d {
+    grid-area: content-d;
+}
+
+.bar-top {
+    box-sizing: border-box;
+    grid-area: bar-top;
+    background-color: hsl(6, 69%, 53%);
+}
+
+.bar-right-b {
+    grid-area: bar-right-b;
+
+    background-color: hsl(0, 6%, 3%);
+}
+
+.wrapper {
+    margin-top: 40px;
+    padding: 100px;
+    height: 100vh;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 20px 50px auto 200px 50px 20px;
+    grid-template-rows: 20px 50px auto auto;
+    grid-template-areas:
+        'bar-top bar-top bar-top ...... ...... bar-right-a'
+        '...... ...... content-a ...... ...... bar-right-a'
+        'bar-left content-b content-c ..... ...... bar-right-b'
+        'bar-left ...... ...... ...... content-d bar-right-b';
+    background-color: #fff;
+    color: #ccc6c6;
+}
+
+.box {
+    padding: 10px;
+    font-size: 150%;
+}
+
+.header,
+.footer {
+    background: lightgray;
+}
