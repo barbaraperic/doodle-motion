@@ -10,6 +10,8 @@
 
 .content-b {
     grid-area: content-b;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
 }
 .content-a {
     grid-area: content-a;

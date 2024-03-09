@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Baumans } from "next/font/google";
 import "./globals.css";
 
-const baumas = Baumans({ subsets: ["latin"], weight: "400" });
+const baumas = Baumans({ subsets: ["latin"], weight: "400",   variable: '--font-baumas',
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",
