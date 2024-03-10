@@ -7,13 +7,13 @@ export default function Home() {
             <div className={`${styles.box} ${styles['bar-top']}`}></div>
             <div className={`${styles.box} ${styles['bar-left']}`}></div>
             <div className={`${styles.box} ${styles['title']}`}>
-                <h1>Experiments with desing layouts</h1>
+                <h2>Experiments with desing layouts</h2>
             </div>
             <div className={`${styles.box} ${styles['subtitle']}`}>
-                <p>I am a subtitle</p>
+                <h2>special edition</h2>
             </div>
             <div className={`${styles.box} ${styles['content-a']}`}>
-                <h1>I am a side text</h1>
+                <h2>Typography and layouts </h2>
             </div>
             <div className={`${styles.box} ${styles['content-b']}`}>
                 <p>
