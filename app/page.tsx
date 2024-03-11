@@ -6,14 +6,14 @@ export default function Home() {
         <div className={styles.wrapper}>
             <div className={`${styles.box} ${styles['bar-top']}`}></div>
             <div className={`${styles.box} ${styles['bar-left']}`}></div>
-            <div className={`${styles.box} ${styles['title-a']}`}>
+            <div className={`${styles.box} ${styles['subtitle-a']}`}>
                 <p>Experiments with desing layouts</p>
             </div>
-            <div className={`${styles.box} ${styles['title-b']}`}>
-                <p>Typography and layouts </p>
-            </div>
-            <div className={`${styles.box} ${styles['content-a']}`}>
+            <div className={`${styles.box} ${styles['title']}`}>
                 <h3>special edition</h3>
+            </div>
+            <div className={`${styles.box} ${styles['subtitle-b']}`}>
+                <p>Typography and layouts </p>
             </div>
 
             <div className={`${styles.box} ${styles['content-b']}`}>

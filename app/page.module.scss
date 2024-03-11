@@ -9,10 +9,11 @@
     grid-template-rows: 20px 120px 120px 120px auto;
     grid-template-areas:
         'bar-top bar-top bar-top'
-        'bar-left title-a bar-right-a'
-        'bar-left title-b bar-right-b'
-        'bar-left content-a bar-right-b'
+        'bar-left subtitle-a bar-right-a'
+        'bar-left subtitle-b bar-right-b'
+        'bar-left title bar-right-b'
         'bar-left ..... bar-right-b';
+    text-align: center;
 }
 
 .bar-top {
@@ -37,28 +38,16 @@
     background-color: var(--black-color-hsl);
 }
 
-.title-a {
-    grid-area: title-a;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.subtitle-a {
+    grid-area: subtitle-a;
 }
 
-.title-b {
-    grid-area: title-b;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title {
+    grid-area: title;
 }
 
-.content-a {
-    grid-area: content-a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.subtitle-b {
+    grid-area: subtitle-b;
 }
 
 .content-b {
@@ -76,6 +65,33 @@
     background: lightgray;
 }
 
+@media (min-width: 650px) {
+    .wrapper {
+        max-width: 620px;
+        grid-template-columns: 20px 50px auto 50px 50px 20px;
+        grid-template-rows: 20px 50px auto auto;
+        grid-template-areas:
+            'bar-top bar-top bar-top bar-top bar-top bar-right-a'
+            '...... ...... subtitle-a subtitle-a ...... bar-right-a'
+            'bar-left subtitle-b title content-b content-b bar-right-b'
+            'bar-left subtitle-b ...... content-b content-b bar-right-b';
+        text-align: left;
+    }
+
+    .subtitle-b {
+        display: block;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-align: end;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 900px;
+    }
+}
+
 // @media (min-width: 700px) {
 //     .wrapper {
 //         padding: 60px;
@@ -87,8 +103,8 @@
 //         grid-template-areas:
 //             'bar-top bar-top bar-top bar-top ...... bar-right-a'
 //             '...... ...... title title ...... bar-right-a'
-//             'bar-left content-a subtitle content-b content-b bar-right-b'
-//             'bar-left content-a ...... content-b content-b bar-right-b';
+//             'bar-left subtitle-a subtitle content-b content-b bar-right-b'
+//             'bar-left subtitle-a ...... content-b content-b bar-right-b';
 //     }
 
 //     .title {
@@ -96,10 +112,4 @@
 //         text-align: left;
 //     }
 
-//     .content-a {
-//         display: block;
-//         writing-mode: vertical-lr;
-//         transform: rotate(180deg);
-//         text-align: end;
-//     }
 // }
