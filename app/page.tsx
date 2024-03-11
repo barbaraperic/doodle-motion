@@ -6,15 +6,16 @@ export default function Home() {
         <div className={styles.wrapper}>
             <div className={`${styles.box} ${styles['bar-top']}`}></div>
             <div className={`${styles.box} ${styles['bar-left']}`}></div>
-            <div className={`${styles.box} ${styles['title']}`}>
-                <h2>Experiments with desing layouts</h2>
+            <div className={`${styles.box} ${styles['title-a']}`}>
+                <p>Experiments with desing layouts</p>
             </div>
-            <div className={`${styles.box} ${styles['subtitle']}`}>
-                <h2>special edition</h2>
+            <div className={`${styles.box} ${styles['title-b']}`}>
+                <p>Typography and layouts </p>
             </div>
             <div className={`${styles.box} ${styles['content-a']}`}>
-                <h2>Typography and layouts </h2>
+                <h3>special edition</h3>
             </div>
+
             <div className={`${styles.box} ${styles['content-b']}`}>
                 <p>
                     I am a longer text Lorem ipsum dolor sit amet consectetur,
