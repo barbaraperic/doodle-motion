@@ -1,0 +1,25 @@
+.main-wrapper {
+    margin-top: 40px;
+    height: 100vh;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 20px 50px 50px auto 50px 50px 20px;
+    grid-template-rows: 20px 50px auto auto;
+    grid-template-areas:
+        'bar2-a ...... ...... ...... ...... ...... ...... '
+        'bar2-a ...... ...... ...... ...... ...... ......'
+        'bar2-a ...... ...... ...... ...... ...... bar2-b'
+        'bar2-a ...... ...... ...... ...... ...... bar2-b';
+    background-color: #fff;
+    color: #444;
+}
+
+.bar-a {
+    grid-area: bar2-a;
+    background-color: var(--accent-color-hsl);
+}
+
+.bar-b {
+    grid-area: bar2-b;
+    background-color: var(--accent-color-hsl);
+}
