@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${baumas.className} container`}>{children}</body>
+            <body className={`${baumas.className} `}>{children}</body>
         </html>
     )
 }

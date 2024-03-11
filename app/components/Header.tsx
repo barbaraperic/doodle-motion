@@ -3,7 +3,7 @@ import styles from './Header.module.scss'
 
 export default function Header() {
     return (
-        <div className={styles.wrapper}>
+        <div className={`grid-wrapper ${styles['header-wrapper']} `}>
             <div className={`${styles.box} ${styles['bar-top']}`}></div>
             <div className={`${styles.box} ${styles['bar-left']}`}></div>
             <div className={`${styles.box} ${styles['subtitle-a']}`}>
