@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
+import Button from './components/Button'
 
 export default function Home() {
     return (
@@ -10,18 +11,12 @@ export default function Home() {
                 <p>Experiments with desing layouts</p>
             </div>
             <div className={`${styles.box} ${styles['title']}`}>
-                <h3>special edition</h3>
+                <h2>Title</h2>
             </div>
             <div className={`${styles.box} ${styles['subtitle-b']}`}>
                 <p>Typography and layouts </p>
             </div>
-
-            <div className={`${styles.box} ${styles['content-b']}`}>
-                <p>
-                    I am a longer text Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit.
-                </p>
-            </div>
+            <Button className={styles['content-a']}>See more</Button>
             <div className={`${styles.box} ${styles['bar-right-a']}`}></div>
             <div className={`${styles.box} ${styles['bar-right-b']}`}></div>
         </div>

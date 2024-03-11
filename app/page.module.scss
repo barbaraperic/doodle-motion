@@ -12,7 +12,7 @@
         'bar-left subtitle-a bar-right-a'
         'bar-left subtitle-b bar-right-b'
         'bar-left title bar-right-b'
-        'bar-left ..... bar-right-b';
+        'bar-left content-a bar-right-b';
     text-align: center;
 }
 
@@ -20,7 +20,7 @@
     box-sizing: border-box;
     grid-area: bar-top;
     background-color: var(--accent-color-hsl);
-    transform: scaleX(1.3) translateX(-12vw);
+    transform: scaleX(1.4) translateX(-12vw);
 }
 
 .bar-left {
@@ -50,9 +50,9 @@
     grid-area: subtitle-b;
 }
 
-.content-b {
-    grid-area: content-b;
-    display: none;
+.content-a {
+    grid-area: content-a;
+    margin: 0 auto;
 }
 
 .box {
@@ -65,16 +65,16 @@
     background: lightgray;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 720px) {
     .wrapper {
-        max-width: 620px;
-        grid-template-columns: 20px 50px auto 50px 50px 20px;
+        max-width: 700px;
+        grid-template-columns: 20px 50px 50px auto 50px 50px 20px;
         grid-template-rows: 20px 50px auto auto;
         grid-template-areas:
-            'bar-top bar-top bar-top bar-top bar-top bar-right-a'
-            '...... ...... subtitle-a subtitle-a ...... bar-right-a'
-            'bar-left subtitle-b title content-b content-b bar-right-b'
-            'bar-left subtitle-b ...... content-b content-b bar-right-b';
+            'bar-top bar-top bar-top bar-top bar-top bar-top bar-right-a'
+            '...... ...... subtitle-a subtitle-a ubtitle-a  ...... bar-right-a'
+            'bar-left subtitle-b ...... title  ...... ...... bar-right-b'
+            'bar-left subtitle-b ...... content-a ...... ...... bar-right-b';
         text-align: left;
     }
 
@@ -84,11 +84,22 @@
         transform: rotate(180deg);
         text-align: end;
     }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (min-width: 1200px) {
     .wrapper {
         max-width: 900px;
+        grid-template-areas:
+            'bar-top bar-top bar-top bar-top bar-top ...... bar-right-a'
+            '...... ...... subtitle-a subtitle-a ......  ...... bar-right-a'
+            'bar-left subtitle-b ...... title ...... ...... bar-right-b'
+            'bar-left subtitle-b ...... content-a ...... ...... bar-right-b';
     }
 }
 
@@ -103,8 +114,8 @@
 //         grid-template-areas:
 //             'bar-top bar-top bar-top bar-top ...... bar-right-a'
 //             '...... ...... title title ...... bar-right-a'
-//             'bar-left subtitle-a subtitle content-b content-b bar-right-b'
-//             'bar-left subtitle-a ...... content-b content-b bar-right-b';
+//             'bar-left subtitle-a subtitle content-a content-a bar-right-b'
+//             'bar-left subtitle-a ...... content-a content-a bar-right-b';
 //     }
 
 //     .title {
