@@ -1,6 +1,5 @@
 .gallery {
     height: 100vh;
-    position: relative;
     margin: 0 auto;
     grid-template-areas:
         'bar3-a ...... ......'
@@ -20,9 +19,8 @@
 }
 
 .circle {
-    position: absolute;
-    inset: calc(50% - 10vw);
-    background-color: rgb(218, 218, 218);
+    border-bottom: 50vh solid var(--accent-color-hsl);
+    border-right: 50vh solid transparent;
 }
 
 @media (min-width: 700px) {
@@ -30,8 +28,8 @@
         grid-template-areas:
             '...... ...... ...... ...... ...... ...... ......'
             'bar3-a ...... ...... ...... ...... ...... bar3-b'
-            'bar3-a ...... ...... ...... ...... ...... bar3-b'
-            'bar3-a ...... ...... ..... ...... ...... bar3-b';
+            'bar3-a ...... circle ...... ...... ...... bar3-b'
+            'bar3-a ...... circle ..... ...... ...... bar3-b';
     }
 
     .bar3-b {
