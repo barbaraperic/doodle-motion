@@ -57,7 +57,7 @@
     background: lightgray;
 }
 
-@media (min-width: var(--tablet-screen)) {
+@media (min-width: 700px) {
     .header-wrapper {
         grid-template-areas:
             'bar-top bar-top bar-top bar-top bar-top bar-top bar-right-a'
@@ -81,7 +81,7 @@
     }
 }
 
-@media (min-width: var(--desktop-screen)) {
+@media (min-width: 1200px) {
     .header-wrapper {
         grid-template-areas:
             'bar-top bar-top bar-top bar-top bar-top ...... bar-right-a'

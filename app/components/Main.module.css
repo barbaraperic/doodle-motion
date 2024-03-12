@@ -16,7 +16,7 @@
     background-color: var(--accent-color-hsl);
 }
 
-@media (min-width: var(--tablet-screen)) {
+@media (min-width: 700px) {
     .main-wrapper {
         grid-template-areas:
             'bar2-a ...... ...... ...... ...... ...... ...... '

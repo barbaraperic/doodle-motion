@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Baumans } from 'next/font/google'
-import './globals.scss'
+import './globals.css'
+import Head from 'next/head'
 
 const baumas = Baumans({
     subsets: ['latin'],
@@ -20,6 +21,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+            </Head>
             <body className={`${baumas.className} `}>{children}</body>
         </html>
     )
