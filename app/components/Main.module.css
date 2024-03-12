@@ -1,9 +1,9 @@
 .main-wrapper {
     grid-template-areas:
-        'bar2-a ...... ...... '
-        'bar2-a ...... ......'
-        'bar2-a ......  bar2-b'
-        'bar2-a ......  bar2-b';
+        'bar2-a ...... dot-b'
+        'bar2-a ...... dot-a'
+        'bar2-a rotated-text bar2-b'
+        'bar2-a rotated-text bar2-b';
 }
 
 .bar-a {
@@ -13,15 +13,47 @@
 
 .bar-b {
     grid-area: bar2-b;
-    background-color: var(--accent-color-hsl);
+    background-color: var(--black-color-hsl);
+}
+
+.rotated-text {
+    grid-area: rotated-text;
+    text-align: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.dot-a {
+    grid-area: dot-a;
+    width: 20px;
+    height: 20px;
+    background-color: var(--black-color-hsl);
+}
+
+.dot-b {
+    grid-area: dot-b;
+    width: 20px;
+    height: 20px;
+    background-color: var(--black-color-hsl);
 }
 
 @media (min-width: 700px) {
     .main-wrapper {
         grid-template-areas:
-            'bar2-a ...... ...... ...... ...... ...... ...... '
-            'bar2-a ...... ...... ...... ...... ...... ...... '
-            'bar2-a ...... ...... ...... ...... ......   bar2-b'
-            'bar2-a ...... ...... ...... ...... ......   bar2-b';
+            'bar2-a ...... ...... ...... ...... ...... ......'
+            'bar2-a ...... ...... ...... ...... rotated-text bar2-b'
+            'bar2-a ...... ...... dot-a ...... rotated-text bar2-b'
+            'bar2-a ...... ...... dot-b ...... ...... ......';
+    }
+
+    .bar-b {
+        grid-area: bar2-b;
+        background-color: var(--black-color-hsl);
+        transform: rotate(35deg) translateX(-238%) translateY(30%);
+    }
+
+    .rotated-text {
+        transform: rotate(214deg) translateX(70%) translateY(-15%);
+        text-align: center;
     }
 }
