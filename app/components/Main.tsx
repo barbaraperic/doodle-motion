@@ -10,7 +10,7 @@ export default function Main() {
             </div>
             <div className={`${styles['dot-a']}`}></div>
             <div className={`${styles['dot-b']}`}></div>
-            <div></div>
+            <div className={`${styles['number']}`}>6</div>
             <div></div>
         </div>
     )

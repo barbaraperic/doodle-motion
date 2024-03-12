@@ -1,0 +1,51 @@
+.gallery {
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    grid-template-areas:
+        'bar3-a ...... ......'
+        'bar3-a ...... ......'
+        'bar3-a ...... bar3-b'
+        'bar3-a ...... bar3-b';
+}
+
+.bar3-a {
+    grid-area: bar3-a;
+    background-color: var(--accent-color-hsl);
+}
+
+.bar3-b {
+    grid-area: bar3-b;
+    background-color: var(--black-color-hsl);
+}
+
+.circle {
+    position: absolute;
+    inset: calc(50% - 10vw);
+    background-color: rgb(218, 218, 218);
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-areas:
+            '...... ...... ...... ...... ...... ...... ......'
+            'bar3-a ...... ...... ...... ...... ...... bar3-b'
+            'bar3-a ...... ...... ...... ...... ...... bar3-b'
+            'bar3-a ...... ...... ..... ...... ...... bar3-b';
+    }
+
+    .bar3-b {
+        background-color: var(--black-color-hsl);
+    }
+
+    .rotated-text {
+        transform: rotate(214deg) translateX(70%) translateY(-15%);
+        text-align: center;
+    }
+
+    .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

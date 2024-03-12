@@ -1,7 +1,7 @@
 .main-wrapper {
     grid-template-areas:
         'bar2-a ...... dot-b'
-        'bar2-a ...... dot-a'
+        'bar2-a number dot-a'
         'bar2-a rotated-text bar2-b'
         'bar2-a rotated-text bar2-b';
 }
@@ -37,13 +37,19 @@
     background-color: var(--black-color-hsl);
 }
 
+.number {
+    grid-area: number;
+    font-size: 4rem;
+    display: block;
+}
+
 @media (min-width: 700px) {
     .main-wrapper {
         grid-template-areas:
-            'bar2-a ...... ...... ...... ...... ...... ......'
+            '...... ...... ...... ...... ...... ...... ......'
             'bar2-a ...... ...... ...... ...... rotated-text bar2-b'
             'bar2-a ...... ...... dot-a ...... rotated-text bar2-b'
-            'bar2-a ...... ...... dot-b ...... ...... ......';
+            'bar2-a ...... ...... dot-b ...... ...... number';
     }
 
     .bar-b {
@@ -55,5 +61,11 @@
     .rotated-text {
         transform: rotate(214deg) translateX(70%) translateY(-15%);
         text-align: center;
+    }
+
+    .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
